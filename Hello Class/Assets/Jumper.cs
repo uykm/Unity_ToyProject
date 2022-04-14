@@ -5,7 +5,7 @@ using UnityEngine;
 public class Jumper : MonoBehaviour
 {
     // 참조 타입의 변수로 컴포넌트 사용
-    public Rigidbody myRigidbody;       // Rigidbody - 컴포넌트(Component : 클래스로 이루어져 있음), myRigidbody - 클래스 타입의 변수( = 참조 타입)
+    public Rigidbody myRigidbody;       // Rigidbody - 컴포넌트(Component : 클래스 타입, 클래스로 이루어져 있음), myRigidbody - 클래스 타입의 변수( = 참조 타입)
                                         // Rigidbody 컴포넌트를 참조 타입의 myRigidbody 로 가리키고 있음.
 
     void Start()
@@ -15,3 +15,10 @@ public class Jumper : MonoBehaviour
                                             // 따라서, Rigidbody 타입에 내장된 AddForce() 메서드 사용 가능
     }
 }
+
+/* 변수를 사용하여 Game Object 와 Component 조종
+1. 필요한 Component 를 Game Object 에 추가
+2. Script 에서 조종할 Component 에 대한 변수 선언 (변수 - 참조 타입)
+3. 해당 변수에 Component 할당
+4. 코드에서 변수를 사용하면 그것이 가리키는 실제 Component 가 동작
+*/

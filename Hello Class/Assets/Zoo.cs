@@ -7,9 +7,13 @@ public class Zoo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // new 연산자로 클래스로부터 오브젝트 생성
         Animal tom = new Animal();      // 새로운 Animal 오브젝트(인스턴스) 생성
+
+                                        // Animal tom -> 이처럼 참조 타입의 변수를 선언할 경우엔 오브젝트 생성 X
                                         // 클래스로 만든 변수는 참조(reference) 타입이고, 참조 타입의 변수는 실체화된 오브젝트 X
-                                        // 따라서 new 키워드를 사용해 오브젝트를 개별적으로 생성해야 함.
+
+                                        // 따라서 new 키워드를 사용해 오브젝트(Animal)를 개별적으로 생성해야 함.
                                         // 여기서 tom 은 생성된 Animal 오브젝트를 가리키는 참조값을 저장하는 변수 !
                                         // Animal 타입의 변수 tom은 생성된 Animal 오브젝트 그 자체가 아님.
         tom.name = "톰";
