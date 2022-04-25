@@ -24,9 +24,9 @@ public class Jumper : MonoBehaviour
     }
 }
 
-/* 변수를 사용하여 Game Object 와 Component 조종
-1. 필요한 Component 를 Game Object 에 추가
-2. Script 에서 조종할 Component 에 대한 변수 선언 (변수 - 참조 타입)
-3. 해당 변수에 Component 할당
-4. 코드에서 변수를 사용하면 그것이 가리키는 실제 Component 가 동작
+/* 변수를 사용하여 게임 오브젝트와 컴포넌트 조종
+1. 필요한 컴포넌트를 게임 오브젝트에 추가
+2. Script 에서 조종할 컴포넌트에 대한 변수 선언 (변수 - 참조 타입)
+3. 해당 변수에 컴포넌트 할당
+4. 코드에서 변수를 사용하면 그것이 가리키는 실제 컴포넌트가 동작
 */
