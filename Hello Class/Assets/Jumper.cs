@@ -6,7 +6,7 @@ public class Jumper : MonoBehaviour
 {
     // 참조 타입의 변수로 컴포넌트 사용
     public Rigidbody myRigidbody;       // Rigidbody - 컴포넌트(Component : 클래스 타입, 클래스로 이루어져 있음), myRigidbody - 클래스 타입의 변수( = 참조 타입)
-                                        // Rigidbody 컴포넌트를 참조 타입의 myRigidbody 로 가리키고 있음.
+                                        // Rigidbody 컴포넌트를 참조 타입의 변수 myRigidbody 로 가리키고 있음.
 
     // ★ 이해안갔던 Point!
     // Rigidbody myRigidbody;
