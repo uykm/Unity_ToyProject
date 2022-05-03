@@ -151,7 +151,7 @@ public class PlayerController : MonoBehaviour
         /*
             NOTE. velocity
             - Rigidbody의 변수
-            - velocity 변수에 새로운 값을 할당하면, 이전 값은 "지우고" 새로운 값으로 "변경"됨. (관선의 영향 X)
+            - velocity 변수에 새로운 값을 할당하면, 이전 값은 "지우고" 새로운 값으로 "변경"됨. (관성의 영향 X)
             ↔ AddForce() 메서드 : 힘을 누적하고 속력을 점진적으로 증가시킴. (관성의 영향 O)
         */
         // 리지드바디의 속도(velocity)에 newVelocity 할당
