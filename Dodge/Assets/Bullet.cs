@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         // 게임 오브젝트에서 RIgidbody 컴포넌트를 찾아 bulletRigidbody에 할당
-        bulletRigidbody = GetComponent<bulletRigidbody>();
+        bulletRigidbody = GetComponent<Rigidbody>();
         // 리지드바디의 속도 = 앞쪽 방향 * 이동 속력
         /*
             NOTE. transform 변수
@@ -35,8 +35,8 @@ public class Bullet : MonoBehaviour
         */
         // 3초 뒤에 자신의 게임 오브젝트 파괴
         Destroy(gameObject, 3f);
-
-        /*  충돌 이벤트 메서드
+    }
+    /*  충돌 이벤트 메서드
 
             NOTE. OnCollision 계열 : 일반 충돌
             
@@ -70,21 +70,20 @@ public class Bullet : MonoBehaviour
             CAUTION. OnTrigger 계열의 메서드는 자신이 트리거 콜라이더가 아니더라도 실행
             - 충돌한 두 콜라이더 중 하나 이상이 트리거 콜라이더라면, 양쪽 모두에서 OnCollition이 아닌 OnTrigger 계열의 메서드가 실행됨.
         */
-        // other - 충돌한 상대방 게임 오브젝트의 콜라이더 컴포넌트
-        void OnTriggerEnter(Collider other)
+    // other - 충돌한 상대방 게임 오브젝트의 콜라이더 컴포넌트
+    void OnTriggerEnter(Collider other)
+    {
+        // 충돌한 상대방 게임 오브젝트가 Player 태그를 가진 경우
+        if (other.tag == "Player")
         {
-            // 충돌한 상대방 게임 오브젝트가 Player 태그를 가진 경우
-            if(other.tag == "Player")
-            {
-                // 상대방 게임 오브젝트에서 PlayerController 컴포넌트 가져오기
-                PlayerController playerController = other.GetComponent<PlayerController>();
+            // 상대방 게임 오브젝트에서 PlayerController 컴포넌트 가져오기
+            PlayerController playerController = other.GetComponent<PlayerController>();
 
-                // 상대방으로부터 PlayerController 컴포넌트를 가져오는 데 성공한 경우 (Player 게임 오브젝트에 PlayerController 스크립트를 컴포넌트로 추가하긴 헀지만, 실수를 대비하기 위한 if문)
-                if(playerController != null)
-                {
-                    // 상대방 PlayerController 컴포넌트의 Die() 메서드 실행
-                    playerController.Die();
-                }
+            // 상대방으로부터 PlayerController 컴포넌트를 가져오는 데 성공한 경우 (Player 게임 오브젝트에 PlayerController 스크립트를 컴포넌트로 추가하긴 헀지만, 실수를 대비하기 위한 if문)
+            if (playerController != null)
+            {
+                // 상대방 PlayerController 컴포넌트의 Die() 메서드 실행
+                playerController.Die();
             }
         }
     }
