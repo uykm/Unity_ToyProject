@@ -21,7 +21,8 @@ public class PlayerController : MonoBehaviour
         NOTE. GetComponent() 메서드
         # GetCompent<원하는 타입>();
         - 원하는 타입의 컴포넌트를 자신의 게임 오브젝트에서 찾아오는 메서드
-        # 제네릭(Generic) 기법 : 꺽쇠 <>, 매서드나 클래스가 여러 타입에 호환되게 함.
+        # 제네릭(Generic) 기법
+        - 꺽쇠 <>, 매서드나 클래스가 여러 타입에 호환되게 함.
     */
     void Start()
     {
