@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
             // 게임오버 상태에서 R 키를 누른 경우
             if(Input.GetKeyDown(KeyCode.R))
             {
-                //SampleScene 씬을 로드
+                // SampleScene 씬을 로드
                 // SceneManger.LoadScene(0);    - SampleScene 씬은 빌드 순법이 0이기 때문에 이와 같은 코드를 작성해도 됨.
                 SceneManager.LoadScene("SampleScene");
 
